@@ -1,9 +1,9 @@
-const listItem = document.querySelectorAll(".item");
+const listItemRef = document.querySelectorAll(".item");
 
-console.log(`Number of categories: ${listItem.length}`);
+console.log(`Number of categories: ${listItemRef.length}`);
 
-for (const item of listItem) {
-  const subcatQuantity = item.querySelectorAll("li").length;
+for (const item of listItemRef) {
+  const subcatQuantityRef = item.querySelectorAll("li").length;
   console.log(`Category: ${item.firstElementChild.textContent}`);
-  console.log(`Elements: ${subcatQuantity}`);
+  console.log(`Elements: ${subcatQuantityRef}`);
 }
