@@ -12,7 +12,7 @@ const refs = {
   valueOfCounterEl: document.querySelector("#value"),
   incrementBtnEl: document.querySelector('[data-action="increment"]'),
 };
-console.log(refs);
+
 refs.decrementBtnEl.addEventListener("click", function () {
   counter.decrement();
   refs.valueOfCounterEl.textContent = counter.value;
