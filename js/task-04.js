@@ -1,3 +1,9 @@
+const refs = {
+  decrementBtnEl: document.querySelector('[data-action="decrement"]'),
+  valueOfCounterEl: document.querySelector("#value"),
+  incrementBtnEl: document.querySelector('[data-action="increment"]'),
+};
+
 const counter = {
   value: 0,
   increment() {
@@ -6,19 +12,29 @@ const counter = {
   decrement() {
     this.value -= 1;
   },
-};
-const refs = {
-  decrementBtnEl: document.querySelector('[data-action="decrement"]'),
-  valueOfCounterEl: document.querySelector("#value"),
-  incrementBtnEl: document.querySelector('[data-action="increment"]'),
+  updateValueInUI() {
+    refs.valueOfCounterEl.textContent = counter.value;
+  },
 };
 
-refs.decrementBtnEl.addEventListener("click", function () {
+const onDecrementButton = () => {
   counter.decrement();
-  refs.valueOfCounterEl.textContent = counter.value;
-});
-
-refs.incrementBtnEl.addEventListener("click", function () {
+  counter.updateValueInUI();
+};
+const onIncrementButton = () => {
   counter.increment();
-  refs.valueOfCounterEl.textContent = counter.value;
-});
+  counter.updateValueInUI();
+};
+
+refs.decrementBtnEl.addEventListener("click", onDecrementButton);
+refs.incrementBtnEl.addEventListener("click", onIncrementButton);
+
+// refs.decrementBtnEl.addEventListener("click", () => {
+//   counter.decrement();
+//   refs.valueOfCounterEl.textContent = counter.value;
+// });
+
+// refs.incrementBtnEl.addEventListener("click", function () {
+//   counter.increment();
+//   refs.valueOfCounterEl.textContent = counter.value;
+// });
