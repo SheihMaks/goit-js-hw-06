@@ -28,13 +28,3 @@ const onIncrementButton = () => {
 
 refs.decrementBtnEl.addEventListener("click", onDecrementButton);
 refs.incrementBtnEl.addEventListener("click", onIncrementButton);
-
-// refs.decrementBtnEl.addEventListener("click", () => {
-//   counter.decrement();
-//   refs.valueOfCounterEl.textContent = counter.value;
-// });
-
-// refs.incrementBtnEl.addEventListener("click", function () {
-//   counter.increment();
-//   refs.valueOfCounterEl.textContent = counter.value;
-// });
