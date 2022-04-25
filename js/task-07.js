@@ -3,6 +3,8 @@ const refs = {
   exampleFontSize: document.querySelector("#text"),
 };
 
+refs.exampleFontSize.style.fontSize = `${refs.input.value}px`;
+
 const onEventInput = (event) => {
   refs.exampleFontSize.style.fontSize = `${event.currentTarget.value}px`;
 };
